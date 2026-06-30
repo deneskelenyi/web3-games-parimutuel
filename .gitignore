@@ -12,7 +12,6 @@ start.log
 start.pid
 backend.pid
 chrome_screenshot.log
-*.png
 *_screenshot.png
 *_test_*.png
 *_tab_*.png

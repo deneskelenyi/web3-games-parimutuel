@@ -72,6 +72,17 @@ For manual setup, testnet deployment, and production notes, see **[INSTALLATION.
 - **Do not use the Anvil default key on mainnet.** The example faucet key is the well-known Anvil test key; replace it before deploying anywhere real.
 - **RNG is blockhash-based.** Suitable for a local/testnet demo; a production version should integrate a VRF or oracle.
 
+## Screenshots
+
+All shots were taken from the running local stack with a demo wallet connected.
+
+| Game | Screenshot |
+|---|---|
+| Dice Over/Under | ![Dice](/screens/casino_dice.png) |
+| Color Duel | ![Color Duel](/screens/casino_color_duel.png) |
+| Crash | ![Crash](/screens/casino_crash.png) |
+| Plinko | ![Plinko](/screens/casino_plinko.png) |
+
 ## Status
 
 This is an **MVP / research prototype**. It proves the architecture and game catalog but is not audited, not licensed for real-money gambling, and not intended for production deployment without significant hardening.
