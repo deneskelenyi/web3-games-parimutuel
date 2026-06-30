@@ -203,12 +203,12 @@ function isWinningBet(gameKey, betType, betValue, outcome, player, roundId) {
 }
 
 function generateBingoCard(player, roundId) {
-    const seed = BigInt(ethers.keccak256(ethers.solidityPackedEncode(['address', 'uint256'], [player, roundId])));
+    const seed = BigInt(ethers.keccak256(ethers.solidityPacked(['address', 'uint256'], [player, roundId])));
     const card = new Array(25).fill(0);
     const used = new Set();
     let nonce = 0;
     while (used.size < 24) {
-        const num = Number(BigInt(ethers.keccak256(ethers.solidityPackedEncode(['uint256', 'uint256'], [seed, nonce]))) % 75n + 1n);
+        const num = Number(BigInt(ethers.keccak256(ethers.solidityPacked(['uint256', 'uint256'], [seed, nonce]))) % 75n + 1n);
         nonce++;
         if (used.has(num)) continue;
         used.add(num);
