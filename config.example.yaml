@@ -1,0 +1,51 @@
+# Example runtime configuration.
+# Copy this file to config.yaml and fill in the RPC endpoints and contract addresses.
+# NEVER commit a config.yaml that contains a real private key.
+
+# Network configuration
+network: "anvil"
+chain_id: 31337
+rpc_http_url: "http://127.0.0.1:8545"
+rpc_ws_url: "ws://127.0.0.1:8545"
+
+# Backend
+port: 8090
+host: "0.0.0.0"
+
+# Contract addresses (filled after deployment)
+contracts:
+  dice: ""
+  color-duel: ""
+  crash: ""
+  plinko: ""
+  roulette: ""
+  coin-flip: ""
+  slots: ""
+  horse-race: ""
+  keno: ""
+  block-bingo: ""
+  minefield: ""
+
+# Faucet for demo wallets.
+# For local Anvil testing you can use the well-known Anvil default key:
+# 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
+# For any public network, use a dedicated faucet key that holds only small amounts.
+faucet:
+  private_key: "0x..."
+  amount_wei: 1000000000000000000  # 1.0 ETH per demo wallet
+  max_drip_per_request: 1000000000000000000
+
+# Auto-settle closed rounds locally so the UI shows outcomes without a bot.
+# Disable on public testnets where you want users/bots to pay gas for bounties.
+auto_settle: true
+auto_settle_interval: 1.0
+
+# Contract config defaults (used in deploy script)
+defaults:
+  blocks_per_round: 5
+  house_edge_bps: 500        # 5%
+  settlement_bounty_bps: 10  # 0.1%
+  min_pool_wei: 0             # 0 ETH for local testing
+  min_bettors: 1              # 1 for easy local testing
+  carry_over_limit: 3
+  claim_expiry_blocks: 0     # disabled for local testing

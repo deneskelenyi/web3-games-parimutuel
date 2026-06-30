@@ -1,0 +1,40 @@
+.env
+.env.*
+!.env.example
+
+# Runtime configuration with real keys / addresses
+config.yaml
+
+*.log
+anvil.log
+backend.log
+start.log
+start.pid
+backend.pid
+chrome_screenshot.log
+*.png
+*_screenshot.png
+*_test_*.png
+*_tab_*.png
+test-results/
+playwright-report/
+playwright/.cache/
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+node_modules/
+
+# Foundry
+contract/cache/
+contract/out/
+contract/lib/
+contract/broadcast/*/31337/
+contract/broadcast/**/dry-run/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
